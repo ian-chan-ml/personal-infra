@@ -1,0 +1,7 @@
+_acme-challenge:
+  value: ["TBfVC9okkSCl9ndSNz-2VtVIwtvGRYD7A_pibnXeUYk"]
+quanianitis.com:
+  value: ["\"v=spf1 include:_spf.google.com include:_spf.mx.cloudflare.net ~all”"]
+quanianitis.com:
+  value: ["google-site-verification=ibQTy0wAZTiVxK7urmq9eca5gGeSbZJt1i1eRDROyq8"]
+  ttl: 3600

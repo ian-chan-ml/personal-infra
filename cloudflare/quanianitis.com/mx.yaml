@@ -1,0 +1,12 @@
+- record_name: 'quanianitis_1'
+  name: 'quanianitis.com'
+  priority: 92
+  value: route3.mx.cloudflare.net
+- record_name: 'quanianitis_2'
+  name: 'quanianitis.com'
+  priority: 89
+  value: route2.mx.cloudflare.net
+- record_name: 'quanianitis_3'
+  name: 'quanianitis.com'
+  priority: 13
+  value: route1.mx.cloudflare.net
