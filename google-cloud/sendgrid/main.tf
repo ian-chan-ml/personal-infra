@@ -15,3 +15,4 @@ provider "google" {
   region  = "asia-southeast1"
 }
 
+data "google_client_config" "this" {}

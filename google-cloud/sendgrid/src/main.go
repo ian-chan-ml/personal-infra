@@ -1,13 +1,13 @@
-package sendgrid
+package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"io"
 	"log"
 	"net/http"
 	"os"
 
-	"github.com/GoogleCloudPlatform/functions-framework-go/functions"
 	"github.com/sendgrid/sendgrid-go"
 	"github.com/sendgrid/sendgrid-go/helpers/mail"
 )
@@ -68,6 +68,10 @@ func sendgridHTTP(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(response.Body))
 }
 
-func init() {
-	functions.HTTP("", sendgridHTTP)
+func main() {
+	http.HandleFunc("/", sendgridHTTP)
+	log.Printf("Listening on port %s", os.Getenv("PORT"))
+	if err := http.ListenAndServe(fmt.Sprintf(":%s", os.Getenv("PORT")), nil); err != nil {
+		log.Fatalf("failed to listen and serve: %v", err)
+	}
 }

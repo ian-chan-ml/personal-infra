@@ -1,29 +1,24 @@
-module "sendgrid" {
-  source  = "GoogleCloudPlatform/cloud-functions/google"
-  version = ">= 0.5"
+module "cloud_run" {
+  source  = "GoogleCloudPlatform/cloud-run/google"
+  version = ">= 0.1"
 
-  project_id        = data.google_client_config.this.project
-  function_location = data.google_client_config.this.region
+  project_id = data.google_client_config.this.project
+  location   = data.google_client_config.this.region
 
-  function_name = "sendgrid"
-  description   = "SMTP server that forwards all outbound mails from quanianitis.com"
+  service_name = "sendgrid"
+  image        = "us-docker.pkg.dev/cloudrun/container/hello"
 
-  runtime    = "go122"
-  entrypoint = "sendgridHTTP"
+  env_vars = data.onepassword_item.sendgrid_api_key.password
 
-  service_config = {
-    available_memory = "128Mi"
-    available_cpu    = "0.2"
-    runtime_env_variables = {
-      "SENDGRID_API_KEY" = data.onepassword_item.sendgrid_api_key.password
-    }
+  service_account_email = module.service_account.email
+
+  limits = {
+    memory = "256Mi"
   }
-
-  storage_source = {
-    bucket     = google_storage_bucket.sendgrid_function.name
-    object     = google_storage_bucket_object.sendgrid_function.name
-    generation = null
+  requests = {
+    memory = "256Mi"
+    cpu    = "0.2"
   }
-
-  depends_on = [google_storage_bucket_object.sendgrid_function]
 }
+
+// TODO: Add custom domain name
