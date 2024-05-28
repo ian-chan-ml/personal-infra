@@ -11,7 +11,7 @@ provider "onepassword" {
 }
 
 provider "google" {
-  credentials = data.onepassword_item.gcp_root.password
-  project     = "personal-quanianitis"
-  region      = "asia-southeast1"
+  # credentials = data.onepassword_item.gcp_root.password
+  project = "personal-quanianitis"
+  region  = "asia-southeast1"
 }

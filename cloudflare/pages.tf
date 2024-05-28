@@ -17,6 +17,6 @@ module "quanianitis" {
   build_config = {
     build_caching   = true
     build_command   = "npx @cloudflare/next-on-pages@1"
-    destination_dir = "/.vercel/output/static"
+    destination_dir = ".vercel/output/static"
   }
 }

@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
     bucket             = "quanianitis-terraform-state-backend"
-    prefix             = "google-cloud/terraform"
+    prefix             = "cloudflare"
     kms_encryption_key = "projects/personal-quanianitis/locations/asia-southeast2/keyRings/infrastructure/cryptoKeys/quanianitis-terraform-backend-state"
   }
 }
