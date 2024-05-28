@@ -69,5 +69,5 @@ func sendgridHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func init() {
-	functions.HTTP("", sendgridHTTP)
+	functions.HTTP("sendgridHTTP", sendgridHTTP)
 }

@@ -12,8 +12,8 @@ module "sendgrid" {
   entrypoint = "sendgridHTTP"
 
   service_config = {
-    available_memory = "128Mi"
-    available_cpu    = "0.2"
+    available_memory = "256Mi"
+    available_cpu    = "0.4"
     runtime_env_variables = {
       "SENDGRID_API_KEY" = data.onepassword_item.sendgrid_api_key.password
     }
