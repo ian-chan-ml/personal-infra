@@ -5,3 +5,6 @@ quanianitis.com:
 quanianitis.com:
   value: ["google-site-verification=ibQTy0wAZTiVxK7urmq9eca5gGeSbZJt1i1eRDROyq8"]
   ttl: 3600
+# Sendgrid - Domain Authentication
+_dmarc:
+  value: ["v=DMARC1; p=none;"]

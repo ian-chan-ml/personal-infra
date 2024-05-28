@@ -4,4 +4,10 @@ status:
 www:
   value: quanianitis.pages.dev
   proxied: true
-  
+# Sendgrid - Domain Authentication
+em7493:
+  value: u44785492.wl243.sendgrid.net
+s1._domainkey:
+  value: s1.domainkey.u44785492.wl243.sendgrid.net
+s2._domainkey:
+  value: s2.domainkey.u44785492.wl243.sendgrid.net
