@@ -47,3 +47,14 @@
 #   id = "f827bd12792de26374f50f0cd6064bbc/quanianitis/quanianitis.com"
 #   to = module.quanianitis.cloudflare_pages_domain.this["quanianitis.com"]
 # }
+
+import {
+  id = "f827bd12792de26374f50f0cd6064bbc/e3f44df63e59476791c67864b2e9105d"
+  to = cloudflare_email_routing_address.quanianitis_gmail_com
+}
+
+import {
+  id = "f827bd12792de26374f50f0cd6064bbc/4bf2a4e25ad741a5b0e5b6476b7f4e93"
+  to = cloudflare_email_routing_address.exodus931_gmail_com
+}
+
