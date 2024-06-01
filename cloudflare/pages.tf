@@ -12,7 +12,7 @@ module "quanianitis" {
   production_compatibility_date = "2024-04-28"
   compatibility_flags           = ["nodejs_compat"]
 
-  domain = ["quanianitis.com"]
+  domain = ["www.quanianitis.com"]
 
   build_config = {
     build_caching   = true
