@@ -16,6 +16,6 @@ provider "cloudflare" {
 
 // Cloudflare Locals
 locals {
-  cloudflare_zone_id    = "53242703e6acff8c4fd67843553da276" // quanianitis.com
-  cloudflare_account_id = "f827bd12792de26374f50f0cd6064bbc" // quanianitis@gmail.com
+  cloudflare_zone_id    = sensitive("53242703e6acff8c4fd67843553da276") // quanianitis.com
+  cloudflare_account_id = sensitive("f827bd12792de26374f50f0cd6064bbc") // quanianitis@gmail.com
 }
