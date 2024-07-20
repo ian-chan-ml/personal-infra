@@ -66,6 +66,7 @@ resource "google_storage_bucket_iam_binding" "viewers" {
   members = compact(
     concat(
       var.viewers,
+      var.allow_public_access ? ["allUsers"] : []
     ),
   )
 }

@@ -121,3 +121,9 @@ variable "set_viewer_roles" {
   type        = bool
   default     = false
 }
+
+variable "allow_public_access" {
+  description = "Grant bucket viewable for all users in the internet. Sets 'allUsers' as objectViewer"
+  type        = bool
+  default     = false
+}
