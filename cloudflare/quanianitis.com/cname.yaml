@@ -2,7 +2,7 @@ status:
   value: 1b2e6e32-14e7-4549-8450-24f01de361d3.cfargotunnel.com
   proxied: true
 www:
-  value: quanianitis.pages.dev
+  value: c.storage.googleapis.com.
   proxied: true
 # Sendgrid - Domain Authentication
 em7493:

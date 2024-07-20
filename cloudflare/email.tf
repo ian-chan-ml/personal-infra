@@ -1,7 +1,7 @@
 locals {
   routing_address = {
-    quanianitis_gmail_com = toset(["admin@quanianitis.com", "marketing@quanianitis.com", "contact@quanianitis.com", "work@quanianitis.com"])
-    exodus931_gmail_com   = toset(["secondary@quanianitis.com"])
+    quanianitis_gmail_com = toset(["admin@quanianitis.com", "mail@quanianitis.com", "contact@quanianitis.com", "work@quanianitis.com"])
+    exodus931_gmail_com   = toset(["secondary@quanianitis.com", "marketing@quanianitis.com"])
   }
 }
 
