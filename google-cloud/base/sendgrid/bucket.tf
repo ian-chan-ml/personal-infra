@@ -1,5 +1,6 @@
 resource "google_storage_bucket" "sendgrid_function" {
-  name = "sendgrid-function"
+  name    = "sendgrid-function"
+  project = data.google_client_config.current.project
 
   location      = "ASIA-SOUTHEAST2"
   storage_class = "STANDARD"

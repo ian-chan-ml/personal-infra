@@ -2,8 +2,8 @@ module "sendgrid" {
   source  = "GoogleCloudPlatform/cloud-functions/google"
   version = ">= 0.5"
 
-  project_id        = data.google_client_config.this.project
-  function_location = data.google_client_config.this.region
+  project_id        = data.google_client_config.current.project
+  function_location = data.google_client_config.current.region
 
   function_name = "sendgrid"
   description   = "SMTP server that forwards all outbound mails from quanianitis.com"
