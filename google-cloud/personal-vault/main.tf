@@ -11,7 +11,8 @@ provider "onepassword" {
 }
 
 provider "google" {
-  project = "personal-vault"
+  project = "personal-vault-430109"
   region  = "asia-southeast1"
 }
 
+data "google_client_config" "current" {}
