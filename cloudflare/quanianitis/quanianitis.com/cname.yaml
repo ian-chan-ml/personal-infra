@@ -1,8 +1,14 @@
-status:
-  value: 1b2e6e32-14e7-4549-8450-24f01de361d3.cfargotunnel.com
+"@":
+  value: c.storage.googleapis.com.
   proxied: true
 www:
   value: c.storage.googleapis.com.
+  proxied: true
+staging:
+  value: c.storage.googleapis.com.
+  proxied: true
+status:
+  value: 1b2e6e32-14e7-4549-8450-24f01de361d3.cfargotunnel.com
   proxied: true
 # Sendgrid - Domain Authentication
 em7493:
